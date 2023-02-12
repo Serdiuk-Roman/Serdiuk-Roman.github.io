@@ -1,14 +1,165 @@
 <!DOCTYPE html>
-<html lang="ua">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Назва сторінки</title>
-    </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="description" content="my training page" />
+    <meta name="author" content="Serdiuk Roman" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon_io/favicon-16x16.png"
+    />
+    <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Personal page - Home</title>
+    <link href="css/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-    <body>
-        <h1>Основний текст</h1>
-    </body>
+  <body>
+    <header class="header">
+      <a href="#" class="header__logo"></a>
+      <div class="form">
+        <!-- <button class="form__button">&#128269;</button> -->
+        <button class="form__button"></button>
+        <input
+          class="form__input"
+          type="search"
+          placeholder="Search items and collections"
+        />
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link" href="#">Collections</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Feature</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">FAQ</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link header__link_gradient" href="#"
+              >Select Wallet</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
+    <div class="container">
+      <section>
+        <div class="main">
+          <div class="main__text">
+            <h1 class="main__title">
+              Create. Sell & Collect Your Own CreaTive NFT
+            </h1>
+            <p class="main__desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio,
+              nihil! Libero neque quae hic voluptatem ipsa.
+            </p>
+            <a href="#" class="main__btn main__btn_gradient">Explore Now</a>
+            <a href="#" class="main__btn">Sell NFT</a>
+            <ul class="main__list">
+              <li class="main__item">
+                <span class="main__span">37k+</span>Artworks
+              </li>
+              <li class="main__item">
+                <span class="main__span">20k+</span>Artists
+              </li>
+              <li class="main__item">
+                <span class="main__span">37k+</span>Aucations
+              </li>
+            </ul>
+          </div>
+          <div class="main__image">
+            <img
+              src="img/funny-hand-drawn-sticker-collection-with-acid-colors/3244240.jpg"
+              alt="img wall"
+              class="main__img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="company">
+          <div class="company__item">
+            <img src="img/binance_logo.svg" alt="Binance" />
+          </div>
+          <div class="company__item">
+            <img src="img/ethereum-logo.svg" alt="Ethereum" />
+          </div>
+          <div class="company__item">
+            <img src="img/blockchain-io.svg" alt="Blockchain" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="title">Featured Artworks</h2>
+        <p class="desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="card">
+          <div class="card__item">
+            <div class="card__cover">
+              <img src="img/green_alien.jpg" class="card__img" alt="" />
+            </div>
+            <div class="card__info">
+              <p class="card__nick">@Johny</p>
+              <p class="card__author">Yellow Painting</p>
+            </div>
+            <p class="card__bid">
+              Current Bid<span class="card__price">0.005 ETH</span>
+            </p>
+          </div>
+          <div class="card__item">
+            <div class="card__cover">
+              <img src="img/temp/158129.png" class="card__img" alt="" />
+            </div>
+            <div class="card__info">
+              <p class="card__nick">@Johny</p>
+              <p class="card__author">Yellow Painting</p>
+            </div>
+            <p class="card__bid">
+              Current Bid<span class="card__price">0.005 ETH</span>
+            </p>
+          </div>
+          <div class="card__item">
+            <div class="card__cover">
+              <img src="img/temp/234.png" class="card__img" alt="" />
+            </div>
+            <div class="card__info">
+              <p class="card__nick">@Johny</p>
+              <p class="card__author">Yellow Painting</p>
+            </div>
+            <p class="card__bid">
+              Current Bid<span class="card__price">0.005 ETH</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section><div class="mini-box"></div></section>
+    </div>
+
+    <footer></footer>
+  </body>
 </html>
