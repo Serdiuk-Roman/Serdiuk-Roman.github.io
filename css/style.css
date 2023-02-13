@@ -239,15 +239,24 @@ body {
   max-width: 100%;
 }
 
+.card__wrapper {
+  padding: 64px 0;
+}
 .title {
   font-size: 40px;
   font-weight: 700;
   text-align: center;
+  line-height: 1.8;
+  max-width: 420px;
+  margin: 0 auto;
 }
 .desc {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
   text-align: center;
+  max-width: 420px;
+  margin: 24px auto;
+  line-height: 1.5;
 }
 
 .card {
@@ -260,6 +269,10 @@ body {
   border-radius: 12px;
   padding: 24px;
   flex-basis: 32%;
+  transition: 0.3s;
+}
+.card__item:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 .card__cover {
   /* position: relative; */
@@ -272,18 +285,113 @@ body {
   object-fit: cover;
   object-position: 50% 50%;
 }
-
 .card__info {
   display: flex;
   justify-content: space-between;
+  margin-top: 24px;
+}
+.card__nick {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.card__author {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.card__bid {
+  text-align: right;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.card__price {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 4px;
+}
+.card__link {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  background: linear-gradient(214.02deg, #b75cff 6.04%, #671ae4 92.95%);
+  padding: 12px 24px;
+  margin-top: 24px;
+  transition: 0.3s;
+  outline: 2px solid transparent;
+}
+.card__link:hover {
+  background: linear-gradient(45deg, #b75cff 33%, #671ae4 66%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  outline: 2px solid #671ae4;
+}
+
+.faq__wrapper {
+  padding: 64px 0;
+}
+.faq {
+  display: flex;
+  justify-content: space-between;
+}
+.faq__item {
+  flex-basis: 48%;
+}
+
+.collapsible {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.collapsible:after {
+  content: "\002B";
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+  color: rgb(255, 255, 255);
+}
+
+.content {
+  padding: 0px 16px;
+  max-height: 0;
+  overflow: hidden;
+  line-height: 1.5;
+  transition: max-height 0.2s ease-out;
+}
+.content p {
+  padding: 8px 0px;
 }
 
 /* стилі для ширини 550 пікселів ф бфльше */
 @media (min-width: 550px) {
 }
 .mini-box {
-  height: 240px;
+  height: 480px;
 }
 footer {
-  height: 240px;
+  height: 480px;
 }
