@@ -89,9 +89,6 @@ body {
   background: linear-gradient(120deg, #984d38 -30%, #181e41 60%) no-repeat;
   font-weight: 500;
   color: #fff;
-  /* font-size: 100%;
-  background-color: rgb(224, 224, 224);
-  padding: 8px; */
 }
 
 .header {
@@ -141,7 +138,6 @@ body {
 .form__input:focus {
   outline: none;
 }
-
 .header__list {
   display: flex;
   list-style-type: none;
@@ -165,11 +161,14 @@ body {
   padding-right: 16px;
 }
 
+.wrapper {
+  padding: 64px 0;
+}
+
 .main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 64px 0;
 }
 .main__text {
   flex-basis: 490px;
@@ -202,6 +201,7 @@ body {
 .main__list {
   display: flex;
   justify-content: space-between;
+  /* align-items: center; */
   align-items: flex-end;
   list-style-type: none;
   padding-left: 0;
@@ -218,7 +218,6 @@ body {
   font-size: 30px;
   font-weight: 700;
 }
-
 .main__image {
   flex-basis: calc(100% - 490px - 116px);
 }
@@ -230,18 +229,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 64px 0;
 }
 .company__item {
-  flex-basis: 30%;
+  flex-basis: 32%;
 }
 .company img {
   max-width: 100%;
 }
 
-.card__wrapper {
-  padding: 64px 0;
-}
+/* card */
 .title {
   font-size: 40px;
   font-weight: 700;
@@ -258,7 +254,6 @@ body {
   margin: 24px auto;
   line-height: 1.5;
 }
-
 .card {
   display: flex;
   justify-content: space-between;
@@ -275,15 +270,16 @@ body {
   background: rgba(255, 255, 255, 0.5);
 }
 .card__cover {
-  /* position: relative; */
   overflow: hidden;
   width: 100%;
 }
 .card__img {
   max-width: 100%;
   height: 320px;
+  border-radius: 4px;
   object-fit: cover;
   object-position: 50% 50%;
+  margin: 0 auto;
 }
 .card__info {
   display: flex;
@@ -332,9 +328,7 @@ body {
   outline: 2px solid #671ae4;
 }
 
-.faq__wrapper {
-  padding: 64px 0;
-}
+/* faq */
 .faq {
   display: flex;
   justify-content: space-between;
@@ -342,7 +336,6 @@ body {
 .faq__item {
   flex-basis: 48%;
 }
-
 .collapsible {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.5);
@@ -355,13 +348,11 @@ body {
   outline: none;
   font-size: 20px;
 }
-
 .active,
 .collapsible:hover {
   background-color: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.8);
 }
-
 .collapsible:after {
   content: "\002B";
   color: rgba(255, 255, 255, 0.5);
@@ -369,29 +360,199 @@ body {
   float: right;
   margin-left: 5px;
 }
-
 .active:after {
   content: "\2212";
   color: rgb(255, 255, 255);
 }
-
 .content {
-  padding: 0px 16px;
   max-height: 0;
   overflow: hidden;
   line-height: 1.5;
   transition: max-height 0.2s ease-out;
 }
 .content p {
-  padding: 8px 0px;
+  padding: 8px 16px;
 }
 
-/* стилі для ширини 550 пікселів ф бфльше */
-@media (min-width: 550px) {
+/* banner */
+.banner {
+  background: linear-gradient(214.02deg, #b75cff 6.04%, #671ae4 92.95%);
+  border-radius: 12px;
+  padding: 64px 16px;
+  text-align: center;
+  margin-bottom: 100px;
 }
-.mini-box {
-  height: 480px;
+.banner__title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.8;
+  max-width: 500px;
+  margin: 0 auto 32px;
 }
-footer {
-  height: 480px;
+.banner__link {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__buttons {
+  display: none;
+}
+/* стилі для ширини до 1100 пікселів */
+@media (max-width: 1100px) {
+  .header,
+  .container {
+    max-width: 900px;
+  }
+  .header__list {
+    gap: 12px;
+    font-size: 16px;
+  }
+  .form__input {
+    width: 280px;
+    font-size: 14px;
+    padding: 10px 10px 10px 40px;
+  }
+
+  .main__text {
+    flex-basis: 450px;
+  }
+  .main__title {
+    font-size: 43px;
+  }
+  .main__desc,
+  .main__btn,
+  .main__item,
+  .desk,
+  .card__link,
+  .collapsible {
+    font-size: 18px;
+  }
+  .main__image {
+    flex-basis: calc(100% - 450px - 32px);
+  }
+  .main__span {
+    font-size: 26px;
+  }
+  .main__list {
+    gap: 40px;
+  }
+  .title {
+    font-size: 36px;
+  }
+  .card__img {
+    height: 300px;
+  }
+  .card__price,
+  .card__author,
+  .card__nick {
+    font-size: 16px;
+  }
+}
+@media (max-width: 880px) {
+  .header,
+  .container {
+    max-width: 750px;
+  }
+  .form,
+  .header__nav {
+    display: none;
+  }
+
+  .header__buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 22px;
+  }
+  .header__search,
+  .header__menu {
+    display: block;
+    background: transparent;
+    height: 20px;
+  }
+  .header__search {
+    width: 20px;
+    background: url("../img/search.svg") center no-repeat;
+  }
+  .header__menu {
+    width: 20px;
+    background: url("../img/menu_icon.svg") center no-repeat;
+  }
+}
+@media (max-width: 550px) {
+  .header,
+  .container {
+    max-width: 96%;
+    min-width: 240px;
+  }
+
+  .main,
+  .faq,
+  .card,
+  .company {
+    flex-direction: column;
+  }
+  .header {
+    padding-bottom: 16px;
+  }
+  .wrapper {
+    padding: 32px 0;
+  }
+
+  .main__text {
+    flex-basis: auto;
+  }
+  .main__title {
+    text-align: center;
+    font-size: 32px;
+  }
+  .main__desc {
+    font-size: 16px;
+    padding: 16px 0;
+  }
+  .main__btn {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  .main__list {
+    gap: 16px;
+  }
+  .main__item {
+    font-size: 14px;
+  }
+  .main__span {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .faq__item {
+    flex-basis: auto;
+  }
+  .collapsible {
+    /* padding: 18px; */
+    font-size: 18px;
+  }
+  .content p {
+    font-size: 16px;
+  }
+
+  .banner {
+    padding: 32px 16px;
+    margin-bottom: 100px;
+  }
+  .banner__title {
+    font-size: 28px;
+    margin: 0 auto 24px;
+  }
+  .banner__link {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
 }
