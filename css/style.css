@@ -97,7 +97,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 16px 64px 16px;
+  padding: 20px 16px 64px;
 }
 .header__logo {
   display: block;
@@ -106,7 +106,7 @@ body {
   background-image: url("../img/favicon_io/android-chrome-192x192.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: 50% 50%;
+  background-position: center;
 }
 .form {
   position: relative;
@@ -128,7 +128,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 10px;
-  padding: 10px 40px;
+  padding: 10px 10px 10px 40px;
   color: #fff;
   font-size: 20px;
 }
@@ -152,6 +152,9 @@ body {
   background: linear-gradient(214.02deg, #b75cff 6.04%, #671ae4 92.95%);
   border-radius: 8px;
   padding: 8px 16px;
+}
+.header__buttons {
+  display: none;
 }
 
 .container {
@@ -177,7 +180,7 @@ body {
   font-size: 50px;
   font-weight: 700;
   line-height: 1.2;
-  padding: 16px 0;
+  padding-bottom: 16px;
 }
 .main__desc {
   font-size: 20px;
@@ -201,8 +204,6 @@ body {
 .main__list {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  align-items: flex-end;
   list-style-type: none;
   padding-left: 0;
   text-align: center;
@@ -227,14 +228,16 @@ body {
 
 .company {
   display: flex;
-  justify-content: space-between;
+  gap: 32px;
   align-items: center;
 }
 .company__item {
   flex-basis: 32%;
 }
 .company img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* card */
@@ -271,15 +274,14 @@ body {
 }
 .card__cover {
   overflow: hidden;
-  width: 100%;
-}
-.card__img {
-  max-width: 100%;
   height: 320px;
   border-radius: 4px;
+}
+.card__img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: 50% 50%;
-  margin: 0 auto;
+  object-position: center;
 }
 .card__info {
   display: flex;
@@ -398,9 +400,28 @@ body {
   color: #fff;
 }
 
-.header__buttons {
+/* Scroll Back To Top Button */
+#topBtn {
   display: none;
+  background: url("../img/up-arrow.svg") center no-repeat;
+  background-size: 24px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
+
+#topBtn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 /* стилі для ширини до 1100 пікселів */
 @media (max-width: 1100px) {
   .header,
@@ -457,6 +478,12 @@ body {
   .container {
     max-width: 750px;
   }
+  .wrapper {
+    padding: 48px 0;
+  }
+  .header {
+    padding-bottom: 20px;
+  }
   .form,
   .header__nav {
     display: none;
@@ -465,21 +492,42 @@ body {
   .header__buttons {
     display: flex;
     justify-content: flex-end;
-    gap: 22px;
+    gap: 36px;
   }
   .header__search,
   .header__menu {
     display: block;
     background: transparent;
-    height: 20px;
+    height: 24px;
   }
   .header__search {
-    width: 20px;
+    width: 24px;
     background: url("../img/search.svg") center no-repeat;
+    background-size: contain;
   }
   .header__menu {
-    width: 20px;
-    background: url("../img/menu_icon.svg") center no-repeat;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 24px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+  }
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+    background-color: rgba(255, 255, 255, 0.8);
   }
 }
 @media (max-width: 550px) {
@@ -517,7 +565,6 @@ body {
     font-size: 16px;
     padding: 12px 16px;
   }
-
   .main__list {
     gap: 16px;
   }
@@ -526,6 +573,13 @@ body {
   }
   .main__span {
     font-size: 20px;
+  }
+
+  .company {
+    gap: 16px;
+  }
+  .company__item {
+    flex-basis: auto;
   }
 
   .title {

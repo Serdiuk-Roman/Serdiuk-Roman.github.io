@@ -32,8 +32,8 @@
   </head>
 
   <body>
-    <header class="header">
-      <a href="#" class="header__logo"></a>
+    <header class="header" id="top">
+      <a href="#top" class="header__logo"></a>
       <div class="form">
         <!-- <button class="form__button">&#128269;</button> -->
         <button class="form__button"></button>
@@ -46,16 +46,16 @@
       <nav class="header__nav">
         <ul class="header__list">
           <li class="header__item">
-            <a class="header__link" href="#">Collections</a>
+            <a class="header__link" href="#collections">Collections</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">Feature</a>
+            <a class="header__link" href="#feature">Feature</a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">FAQ</a>
+            <a class="header__link" href="#faq">FAQ</a>
           </li>
           <li class="header__item">
-            <a class="header__link header__link_gradient" href="#"
+            <a class="header__link header__link_gradient" href="#doit"
               >Select Wallet</a
             >
           </li>
@@ -63,8 +63,13 @@
       </nav>
       <div class="header__buttons">
         <button class="header__search"></button>
-        <button class="header__menu"></button>
+        <button class="header__menu" onclick="button_burger(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
       </div>
+      <div onclick="topFunction()" id="topBtn" title="Go to top"></div>
     </header>
 
     <div class="container">
@@ -107,8 +112,9 @@
 
       <section>
         <!-- company -->
+
         <div class="wrapper">
-          <div class="company">
+          <div class="company" id="collections">
             <div class="company__item">
               <img src="img/binance_logo.svg" alt="Binance" />
             </div>
@@ -125,7 +131,7 @@
       <section>
         <!-- card -->
         <div class="wrapper">
-          <h2 class="title">Featured Artworks</h2>
+          <h2 class="title" id="feature">Featured Artworks</h2>
           <p class="desc">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
@@ -184,7 +190,7 @@
       <section>
         <!-- faq -->
         <div class="wrapper">
-          <h2 class="title">Freaquently Asked Question</h2>
+          <h2 class="title" id="faq">Freaquently Asked Question</h2>
           <p class="desc">Wanna Ask Something?</p>
           <div class="faq">
             <div class="faq__item">
@@ -252,7 +258,7 @@
       <section>
         <!-- banner -->
         <div class="wrapper">
-          <div class="banner">
+          <div class="banner" id="doit">
             <h3 class="banner__title">Get ready to collect our NFT</h3>
             <a href="#" class="banner__link">Get Started</a>
           </div>
