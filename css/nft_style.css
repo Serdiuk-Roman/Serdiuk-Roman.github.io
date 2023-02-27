@@ -9,6 +9,7 @@ body {
   background: linear-gradient(120deg, #984d38 -30%, #181e41 60%) no-repeat;
   font-weight: 500;
   color: #fff;
+  min-height: 100%;
 }
 /* header */
 .header {
