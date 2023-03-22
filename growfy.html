@@ -643,6 +643,7 @@
                   type="email"
                   placeholder="Enter your email"
                   required
+                  autocomplete="on"
                   class="subscribe__input"
                 />
                 <button type="submit" class="subscribe__button button">
@@ -654,7 +655,24 @@
         </div>
         <div class="footer__bottom bottom-footer">
           <div class="bottom-footer__containe">
-            <div class="bottom-footer__copy">© 2022</div>
+            <div class="bottom-footer__copy">
+              <h3 class="bottom-footer__title">Page for practice</h3>
+              <p class="info__desc">
+                The page was created based on the video tutorial <br />
+                <a href="https://youtu.be/7E6lHqmf4FY">
+                  "Адаптивна верстка сайту для початківців"
+                </a>
+                by Женя Андріканіч
+              </p>
+              <p>
+                noCompany Name &copy; 2022 -
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All Rights Reserved
+              </p>
+              <p><a href="index.html">Home page</a></p>
+            </div>
           </div>
         </div>
       </footer>
